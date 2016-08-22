@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Schedule</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+        <template ngFor let-time [ngForOf]="times">
+          <ion-item-divider light>{{time}}</ion-item-divider>  
+        <ion-item *ngFor="let item of job | datedivider: [time]">
+            <ion-avatar item-left>
+                <!--<div class="road-time" [style.color] = "item.traffic ? 'red' : 'green'">{{item.duration}}</div>-->
+                <!--<div class="road-time">{{item.duration}}</div>-->
+                <!--<p class="distance">{{item.distance}}</p>-->
+            </ion-avatar>    
+            
+            <h2 class="address">{{item.address}}</h2>
+            <p>{{item.name}}</p>
+            </ion-item>
+            
+           </template> 
+        </ion-list>
+  <!--<ion-list>
+    <ion-list-header>
+    Today
+  </ion-list-header>
+  <ion-item>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon name="{{item.icon}}" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </button>
+   </ion-item> 
+  </ion-list>-->
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
