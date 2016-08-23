@@ -1,5 +1,5 @@
-# NuForceMF-ionic2
+# NuForceMF-ionic2 Mobile App Using MobileFirst
 <p align="center">
-  Home Screen<img src="Home Screen.png" width="350"/>
-  Scheduler<img src="scheduler.png" width="350"/>
+  <img src="Home Screen.png" width="350"/>
+  <img src="scheduler.png" width="350"/>
 </p>
