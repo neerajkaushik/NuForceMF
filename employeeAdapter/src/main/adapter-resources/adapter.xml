@@ -23,7 +23,7 @@
 		</connectionPolicy>
 	</connectivity>
 
-	<procedure name="getSchedule"/>
+	<procedure name="getSchedule" scope="restrictedData"/>
 	<property name="endpoint" displayName="Endpoint" defaultValue="schedule" />
 	<!--<procedure name="unprotected" secured="false"/>-->
 
